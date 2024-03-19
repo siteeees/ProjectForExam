@@ -1,0 +1,206 @@
+.container-favorite {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.fav-text {
+    text-align: center;
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+    color: #403F3D;
+}
+
+.favorite-word {
+  color: #B0907A;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.slide { 
+    touch-action: pan-y;
+    position: relative;                               
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.slider-wrap {
+    height: auto;
+    width: 100%;
+    max-width: 1152px;
+    min-width: 380px;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+}
+
+.product {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 20px;
+    width: 100%;
+    max-width: 1152px;
+    min-width: 380px;
+}
+
+.description {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.drink, .price {
+    margin: 0;
+    color: #403F3D;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 125%;
+}
+
+.description-text {
+    margin: 0;
+    color: #403F3D;
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+}
+
+.arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px solid #665F55;
+    background-color: #E1D4C9;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition:
+    background-color 500ms ease-out, 
+    border-color 500ms ease-out;
+    z-index: 1;
+}
+
+.arrow:hover{
+    background-color: #665F55;
+    border-color: #665F55;
+}
+
+.arrow-svg {
+    stroke: #665F55;
+    width: 24px;
+    height: 24px;
+    transition: stroke 500ms ease-out;
+}
+
+
+.arrow:hover .arrow-svg {
+    stroke: #E1D4C9;
+}
+
+.controls {
+    width: 144px;
+    display: flex;
+    gap: 12px;
+}
+
+.control {
+    border-radius: 100px;
+    width: 40px;
+    height: 4px;
+    background-color: #C1B6AD;
+}
+
+.progress {
+    position: absolute;
+    background-color: #665F55;
+    height: 4px;
+    width: 0;
+    border-radius: 100px;
+    z-index: 1;
+    animation-timing-function: linear;
+    animation-play-state: running;
+}
+
+@keyframes filling {
+    from {
+        width: 0;
+    } to {
+        width: 40px;
+    }
+}
+
+@keyframes empty {
+    from {
+        width: 10px;
+    } to {
+        width: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .fav-text {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) and (hover: none) {
+    .arrow:hover {
+        border: 1px solid #665F55;
+        background-color: #E1D4C9;   
+    }
+
+    .arrow:hover .arrow-svg {
+        stroke: #665F55;
+    }
+}
+
+@media  (max-width: 670px) {
+    .fav-text {
+        margin: 0;
+        font-size: 32px;
+    }
+
+    .slide {
+        justify-content: center;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .coffee-slider {
+        width: 21.75rem;
+        height: 21.75rem;
+    }
+
+    .description {
+        width: 348px;
+    }
+}

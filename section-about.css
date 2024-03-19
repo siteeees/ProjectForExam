@@ -1,0 +1,153 @@
+.container-about {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 125%;
+    color: #403F3D
+}
+
+.perfect-word {
+    color: #B0907A;
+}
+
+.images {
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.column-1, .column-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.about-1 {
+    width: 660px;
+    height: 590px;
+    border-radius: 20px;
+    background: url(../images/about-1.svg);
+    background-size: 110%;
+    background-position: center;
+    transition: background-size 500ms ease-out;
+}
+
+.about-2 {
+    width: 660px;
+    height: 430px;
+    border-radius: 20px;
+    background: url(../images/about-2.svg);
+    background-size: 110%;
+    background-position: center;
+    transition: background-size 500ms ease-out;
+}
+
+.about-3 {
+    width: 660px;
+    height: 430px;
+    border-radius: 20px;
+    background: url(../images/about-3.svg);
+    background-size: 110%;
+    background-position: center;
+    transition: background-size 500ms ease-out;
+}
+
+.about-4 {
+    width: 660px;
+    height: 590px;
+    border-radius: 20px;
+    background: url(../images/about-4.svg);
+    background-size: 110%;
+    background-position: center;
+    transition: background-size 500ms ease-out;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .about-1:hover, .about-2:hover, .about-3:hover, .about-4:hover {
+        background-size: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1439px) {
+    .images {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-2, .about-3 {
+        display: none;
+    }
+
+    .about-1, .about-4 {
+        background-size: 105%;
+        width: 90vw;
+    }
+
+    .about-1:hover, .about-4:hover {
+        background-size: 105%;
+    }
+
+    .images {
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .about-1:hover, .about-4:hover {
+            background-size: 100%;
+        }
+    }
+     
+}
+
+
+@media (max-width: 670px) {
+    .about-text {
+        font-size: 32px;
+    }
+
+    .about-1, .about-4 {
+        width: 90vw;
+        height: 590px;
+        background-size: 210%;
+    }
+
+    .about-1:hover, .about-4:hover {
+        background-size: 210%;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .about-1:hover, .about-4:hover {
+            background-size: 190%;
+        }
+    }
+}
+
+@media (min-width: 460px) and (max-width: 670px) {
+    .about-1, .about-4 {
+        background-size: 150%;
+    }
+
+    .about-1:hover, .about-4:hover {
+        background-size: 150%;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .about-1:hover, .about-4:hover {
+            background-size: 170%;
+        }
+    }
+}
